@@ -1,0 +1,38 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #535151;
+    padding: 20px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    margin-right: 40px;
+}
+
+.nav li:last-child {
+    margin-right: 0;
+}
+
+.active {
+    color: saddlebrown;
+    font-weight: 500;
+}
+
+button {
+    background-color: #535151;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    visibility: 100%;
+    font-size: 14px;
+    /* box-shadow: #f8b015; */
+}
+button:hover {
+    background-color: #f8b015;
+}
