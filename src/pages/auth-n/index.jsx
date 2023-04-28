@@ -11,7 +11,7 @@ export const AuthorizationPage = () => {
           <input className="block1" type="text" placeholder="Логин" id="name" />
           <input className="block1" type="password" placeholder="Пароль" id="password" />
           <button className='enter'>Войти</button>
-          <p className='auth1-p' >Нет аккаунта? <Link to="/auth-end">Зарегистрируйся</Link></p>
+          <p className='auth1-p' >Нет аккаунта? <Link className='registr' to="/auth-end">Зарегистрируйся</Link></p>
         </div>
       );
     }
