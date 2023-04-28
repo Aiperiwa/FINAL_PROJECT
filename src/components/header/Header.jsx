@@ -1,24 +1,25 @@
 import NavStyle from './header.module.css'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import LogoSvg from '../../img/logo.png'
 
 
 
 const links = [
-  {
-    id: 1,
-    text: 'Тест',
-    route: '/testForm'    
-  },
+  // {
+  //   id: 1,
+  //   text: 'Тест',
+  //   route: '/testForm'
+  // },
   {
     id: 2,
     text: 'Главная',
     route: '/home'
   },
-  {
-    id: 3,
-    text: 'Профиль',
-    route: '/profile'
-  },
+  // {
+  //   id: 3,
+  //   text: 'Профиль',
+  //   route: '/profile'
+  // },
   {
     id: 4,
     text: 'Вопросы',
@@ -29,28 +30,36 @@ const links = [
     text: 'Пройти тестирование',
     route: '/test'
   },
-  {
-    id: 6,    
-    text: 'Авторизация',
-    route: '/auth-n'
-  }
+  // {
+  //   id: 6,
+  //   text: 'Войти',
+  //   route: '/auth-n'
+  // }
 ]
 
 
 
 const Header = () => {
   return (
-    <ul className={NavStyle.nav}>
-      {
-        links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.route}>
-              <button>{link.text}</button>
-            </NavLink>
-          </li>
-        ))
-      }
-    </ul>
+    <>
+      <header className={NavStyle.header}>
+
+        <Link to="/">
+          <img className={NavStyle.logo} src={ LogoSvg } alt="logotype" />
+        </Link>
+        {
+          links.map((link) => (
+              <NavLink className={NavStyle.nav} key={link.id} to={link.route}>
+                {link.text}
+              </NavLink>
+          ))
+        }
+        <NavLink>
+          <button className={NavStyle.enter}>Войти</button>
+        </NavLink>
+        
+      </header>
+    </>
   )
 }
 
