@@ -44,7 +44,7 @@ const Header = () => {
     <>
       <header className={NavStyle.header}>
 
-        <Link to="/">
+        <Link to="/home">
           <img className={NavStyle.logo} src={ LogoSvg } alt="logotype" />
         </Link>
         {
