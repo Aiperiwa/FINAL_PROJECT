@@ -1,0 +1,26 @@
+.content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.bigContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    width: 1000px;
+    height: 500px;
+  
+    box-shadow: 0px 4px 40px rgba(116, 124, 153, 0.74);
+    border-radius: 20px;
+  
+    background-color: white;
+    margin: 10px auto;
+  }
