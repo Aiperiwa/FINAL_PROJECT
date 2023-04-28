@@ -1,11 +1,14 @@
 .footer {
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  align-items: center;
+  background-color: #474B4F;
+  border-radius: 0 0 30px 30px;
 }
+
 .logo {
   width: 100px;
   height: 100px;
