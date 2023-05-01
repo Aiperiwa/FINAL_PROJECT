@@ -9,7 +9,6 @@ export const ProfilePage = () => {
   const [error, setError] = useState('')
 
 
-
   useEffect (() => {
     setLoading(true)
     mockFetch('/profile.json')
