@@ -54,12 +54,12 @@ const Header = () => {
               </NavLink>
           ))
         }
-        <NavLink>
+  
           <Link to='/auth-n'>
           <button className={NavStyle.enter}>Войти</button>
           </Link>
           
-        </NavLink>
+    
         
       </header>
     </>
