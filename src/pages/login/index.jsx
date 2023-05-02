@@ -22,7 +22,7 @@ export const AuthorizationPage = () => {
     .then(res => res.json())
     .then((data) => {
       /*{ token, username .... role } */
-      console.log('aa', data)
+      // console.log('aa', data)
 
       localStorage.setItem('token', data.token)
       if (data.role === 'admin') navigate('/questionList')

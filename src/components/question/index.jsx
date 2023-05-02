@@ -1,11 +1,11 @@
-// import './styles.css'
+import './style.css'
 
 
 export const Question = ({ data }) => {
   return (
 
-    <div>
-      {data.text}
+    <div className="q-item">
+      <h3>{data.text}</h3> 
       <div className="form">
         {
           data.variants.map((v) => (
