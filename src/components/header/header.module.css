@@ -56,7 +56,10 @@
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+}
 
+.pdd:hover {
+  color: #61892F;
 }
 
 
@@ -76,5 +79,7 @@
    
 
    }
+
+   
   
 }

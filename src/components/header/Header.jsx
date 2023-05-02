@@ -4,6 +4,7 @@ import LogoSvg from '../../img/logo.png'
 
 
 
+
 const links = [
 
   {
@@ -12,11 +13,6 @@ const links = [
     route: '/home'
   },
 
-  // {
-  //   id: 4,
-  //   text: 'ПДД КР',
-  //   route: '/PDD_KR2021.pdf'
-  // },
   {
     id: 5,
     text: 'Пройти тестирование',
@@ -47,8 +43,6 @@ const Header = () => {
           <Link to='/login'>
           <button className={NavStyle.enter}>Войти</button>
           </Link>
-          
-    
         
       </header>
     </>
