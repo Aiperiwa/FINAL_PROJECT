@@ -63,6 +63,7 @@
 import NavStyle from './header.module.css'
 import { Link, NavLink } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
+import {useState} from 'react';
 
 
 
@@ -108,11 +109,11 @@ const Header = () => {
           }
           <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
           <Link to='/login'>
-          <button className={NavStyle.enter}>Войти</button>
+            <button className={NavStyle.enter}>Войти</button>
           </Link>
-          
-    
-        
+        </nav>
+
+
       </header>
     </>
   )

@@ -2,6 +2,8 @@ import './footer.module.css'
 import NavStyle from './footer.module.css'
 import { Link } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
+
+
 const Footer = () => {
   return (
     <div className={NavStyle.footer}>
