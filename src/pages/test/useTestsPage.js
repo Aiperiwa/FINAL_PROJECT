@@ -26,7 +26,7 @@ export const useTestPage = () => { // then
   }
 }
 
-// export const useEventPage = () => {  //async await
+// export const useEventPage = () => {              //async await
 //   const [events, setEvents] = useState([])
 //   const [loading, setLoading] = useState(false)
 //   const [error, setError] = useState('')

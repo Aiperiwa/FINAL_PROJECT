@@ -4,7 +4,7 @@ import ErrorImg from '../../img/error.png'
 export const Error = () => {
   return (
     <div>
-      <img  src={ ErrorImg } alt="error" />
+      {/* <img  src={ ErrorImg } alt="error" /> */}
     </div>
   )
 }
