@@ -1,10 +1,11 @@
-import LoaderImg  from '../../img/loader.gif'
+import LoaderImg  from '../../img/5a3674e16eab44.5762498915135183054533.png'
 // import NavStyle from './home.module.css'
+import './loader.css'
 
 export const Loader = () => {
   return (
-    <div>
-      <img  src={ LoaderImg } alt="loader" />
+    <div className='parent' >
+      <img className='wheel' src={ LoaderImg } alt="loader" />
     </div>
   )
 }

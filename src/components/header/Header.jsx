@@ -63,7 +63,8 @@
 import NavStyle from './header.module.css'
 import { Link, NavLink } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
-import { useState } from 'react'
+
+
 
 const links = [
   {
@@ -71,6 +72,12 @@ const links = [
     text: 'Главная',
     route: '/'
   },
+
+  // {
+  //   id: 4,
+  //   text: 'ПДД КР',
+  //   route: '/PDD_KR2021.pdf'
+  // },
   {
     id: 5,
     text: 'Пройти тестирование',
@@ -102,14 +109,10 @@ const Header = () => {
           <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
           <Link to='/login'>
           <button className={NavStyle.enter}>Войти</button>
-        </Link>
-        </nav>
+          </Link>
+          
+    
         
-        <button className={`${NavStyle.burger} ${menuOpen ? NavStyle.active : ''}`} onClick={toggleMenu}>
-          <span className={NavStyle.line}></span>
-          <span className={NavStyle.line}></span>
-          <span className={NavStyle.line}></span>
-        </button>
       </header>
     </>
   )
