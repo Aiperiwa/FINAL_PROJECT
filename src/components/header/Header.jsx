@@ -12,11 +12,11 @@ const links = [
     route: '/home'
   },
 
-  {
-    id: 4,
-    text: 'ПДД КР',
-    route: '/questionList'
-  },
+  // {
+  //   id: 4,
+  //   text: 'ПДД КР',
+  //   route: '/PDD_KR2021.pdf'
+  // },
   {
     id: 5,
     text: 'Пройти тестирование',
@@ -42,6 +42,7 @@ const Header = () => {
               </NavLink>
           ))
         }
+          <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
   
           <Link to='/login'>
           <button className={NavStyle.enter}>Войти</button>
