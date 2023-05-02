@@ -1,0 +1,16 @@
+.homeImg {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+}
+
+.loader {
+    width: 500px;
+    height: 200px;
+}
+
+.error {
+    width: 500px;
+    height: 200px;
+}
