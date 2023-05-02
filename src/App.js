@@ -20,7 +20,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
-          <Route path='/home' index element={<HomePage/> } />
+          <Route index element={<HomePage/> } />
           <Route path='/login' element={<AuthorizationPage/> } />
           <Route path='/auth' element={<RegistrationPage/> } />
           <Route path='/profile' element={<ProfilePage/> } />

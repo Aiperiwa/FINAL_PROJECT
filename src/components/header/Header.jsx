@@ -13,7 +13,7 @@ const links = [
   {
     id: 2,
     text: 'Главная',
-    route: '/home'
+    route: '/'
   },
   // {
   //   id: 3,
@@ -44,7 +44,7 @@ const Header = () => {
     <>
       <header className={NavStyle.header}>
 
-        <Link to="/home">
+        <Link to="/">
           <img className={NavStyle.logo} src={ LogoSvg } alt="logotype" />
         </Link>
         {
