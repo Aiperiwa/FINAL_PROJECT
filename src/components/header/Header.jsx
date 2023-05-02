@@ -22,7 +22,7 @@ const links = [
   // },
   {
     id: 4,
-    text: 'Вопросы',
+    text: 'ПДД КР',
     route: '/questionList'
   },
   {
@@ -54,12 +54,12 @@ const Header = () => {
               </NavLink>
           ))
         }
-        <NavLink>
-          <Link to='/auth-n'>
+  
+          <Link to='/login'>
           <button className={NavStyle.enter}>Войти</button>
           </Link>
           
-        </NavLink>
+    
         
       </header>
     </>

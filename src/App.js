@@ -4,8 +4,8 @@ import Header  from './components/header/Header'
 import Footer  from './components/footer/Footer'
 import { Layout } from './components/layout/'
 
-import { AuthorizationPage } from './pages/auth-n'
-import { RegistrationPage } from './pages/auth-end'
+import { AuthorizationPage } from './pages/login'
+import { RegistrationPage } from './pages/auth'
 
 import { HomePage } from './pages/home'
 import { ProfilePage } from './pages/profile'
@@ -21,8 +21,8 @@ export const App = () => {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route path='/home' index element={<HomePage/> } />
-          <Route path='/auth-n' element={<AuthorizationPage/> } />
-          <Route path='/auth-end' element={<RegistrationPage/> } />
+          <Route path='/login' element={<AuthorizationPage/> } />
+          <Route path='/auth' element={<RegistrationPage/> } />
           <Route path='/profile' element={<ProfilePage/> } />
           <Route path='/questionList' element={<QuestionListPage/> } />
           <Route path='/test' element={<TestPage/> } />

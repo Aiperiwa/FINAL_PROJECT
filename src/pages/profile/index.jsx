@@ -8,7 +8,6 @@ export const ProfilePage = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-
   useEffect (() => {
     setLoading(true)
     mockFetch('/profile.json')
@@ -27,6 +26,7 @@ export const ProfilePage = () => {
   }, [])
   return (
     <div>
+      
       {loading && <div>Loading...</div>}
       {error && <div style={{ color: 'red' }}>{error}</div>}
 
@@ -36,6 +36,21 @@ export const ProfilePage = () => {
           
         ))
       }
+
     </div>
   )
 }
+//   const [user, setUser] = useState(null)
+//   useEffect(() => {
+    
+//     fetch('http://localhost:1717/me', {
+//       headers: {
+//         'X-Auth': localStorage.getItem('token')
+//       }
+//     })
+//       .then(res => res.json())
+//       .then(data => {
+//         console.log(data)
+//         setUser(data)
+//       })
+//   }, [])

@@ -1,7 +1,11 @@
+import HomeImage  from '../../img/main.jpg'
+import NavStyle from './home.module.css'
+
+
 export const HomePage = () => {
   return (
     <div>
-      HomePage
+      <img className={NavStyle.homeImg} src={ HomeImage } alt="image" />
     </div>
   )
 }
