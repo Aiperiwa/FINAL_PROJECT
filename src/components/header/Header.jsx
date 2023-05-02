@@ -5,36 +5,24 @@ import LogoSvg from '../../img/logo.png'
 
 
 const links = [
-  // {
-  //   id: 1,
-  //   text: 'Тест',
-  //   route: '/testForm'
-  // },
+
   {
     id: 2,
     text: 'Главная',
     route: '/'
   },
+
   // {
-  //   id: 3,
-  //   text: 'Профиль',
-  //   route: '/profile'
+  //   id: 4,
+  //   text: 'ПДД КР',
+  //   route: '/PDD_KR2021.pdf'
   // },
-  {
-    id: 4,
-    text: 'ПДД КР',
-    route: '/questionList'
-  },
   {
     id: 5,
     text: 'Пройти тестирование',
     route: '/test'
   },
-  // {
-  //   id: 6,
-  //   text: 'Войти',
-  //   route: '/auth-n'
-  // }
+
 ]
 
 
@@ -54,6 +42,7 @@ const Header = () => {
               </NavLink>
           ))
         }
+          <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
   
           <Link to='/login'>
           <button className={NavStyle.enter}>Войти</button>
