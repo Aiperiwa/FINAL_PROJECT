@@ -10,16 +10,26 @@
   font-weight: 500;  
 }
 
-.nav {
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10em;
+  animation: spin 4s linear infinite;
+  margin-right: 0;
+}
+
+.logo:hover {
+  animation: none;
+}
+
+.link {
   color: aliceblue;
   text-decoration: none;
   font-size: 20px;
+  margin-right: 50px;
 }
 
-.nav:last-child {
-  margin-left: 150px;
 
-}
 
 .enter {
   width: 100px;
@@ -28,6 +38,7 @@
   border-radius: 30px;
   background: #61892F ;
   color: #fff;
+  margin-left: 100px;
 }
 
 .enter:hover {
@@ -35,30 +46,23 @@
   font-weight: 500;
 }
 
-
 .nav:hover {
   color: #61892F;
-}
-
-
-.logo {
-  width: 100px;
-  height: 100px;
-  margin-right: 10em;
-  animation: spin 4s linear infinite;
-}
-
-.logo:hover {
-  animation: none;
 }
 
 .pdd {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
-
 }
 
+.pdd:hover {
+  color: #61892F;
+}
+
+.burger {
+  display: none;
+}
 
 @keyframes spin {
   100% {
@@ -67,14 +71,181 @@
   
 }
 
-@media screen and (max-width: 900px) {
-  .nav {
-    display: none;
+/* Styles for burger menu */
+@media only screen and (max-width: 900px) {
+  .header {
+    position: relative;
   }
-   .pdd{
-    display: none;
-   
 
-   }
+  .nav {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 10px;
+    right: 100px;
+    background-color: #474B4F;
+    /* text-align: center; */
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 30px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .burger span:last-child {
+    margin-bottom: 0;
+  }
+
+  .burger.active span:first-child {
+    transform: rotate(45deg) translate(12px, 12px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:last-child {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+  .link {
+    display: block;
+    font-size: 15px;
+    /* line-height: 2; */
+    color: #fff;
+    padding: 10px;
+    /* transition: background-color 0.2s ease-in-out; */
+    margin-right: 0;
+  }
+
   
+  .link:hover {
+    background-color: #e91818;
+  }
+  
+  .pdd {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .enter {
+    margin-left: 0;
+    height: 25px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .header {
+    position: relative;
+  }
+
+  .nav {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 10px;
+    right: 100px;
+    background-color: #474B4F;
+    /* text-align: center; */
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 30px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .burger span:last-child {
+    margin-bottom: 0;
+  }
+
+  .burger.active span:first-child {
+    transform: rotate(45deg) translate(12px, 12px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:last-child {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+  .link {
+    display: block;
+    font-size: 15px;
+    /* line-height: 2; */
+    color: #fff;
+    padding: 10px;
+    /* transition: background-color 0.2s ease-in-out; */
+    margin-right: 0;
+  }
+
+  .pdd {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .enter {
+    margin-left: 0;
+    height: 25px;
+  }
 }
