@@ -5,21 +5,13 @@ import LogoSvg from '../../img/logo.png'
 
 
 const links = [
-  // {
-  //   id: 1,
-  //   text: 'Тест',
-  //   route: '/testForm'
-  // },
+
   {
     id: 2,
     text: 'Главная',
     route: '/home'
   },
-  // {
-  //   id: 3,
-  //   text: 'Профиль',
-  //   route: '/profile'
-  // },
+
   {
     id: 4,
     text: 'ПДД КР',
@@ -30,11 +22,7 @@ const links = [
     text: 'Пройти тестирование',
     route: '/test'
   },
-  // {
-  //   id: 6,
-  //   text: 'Войти',
-  //   route: '/auth-n'
-  // }
+
 ]
 
 
