@@ -32,7 +32,7 @@ export const AuthorizationPage = () => {
    
       return (
         <form className="container">
-          <h1 className='auth1' >Вход</h1>
+          <h4 className='auth1' >Вход</h4>
           <input 
           className="block1" 
           type="text" 

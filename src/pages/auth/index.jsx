@@ -56,9 +56,8 @@ export const RegistrationPage = () => {
   };
 
   return (
-    <div className="container2">
-      <h1 className="auth1">Регистрация</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="container2" onSubmit={handleSubmit}>
+        <h4 className="auth1">Регистрация</h4>
         <input
           className="block1"
           type="text"
@@ -96,13 +95,12 @@ export const RegistrationPage = () => {
         <button className="enter" type="submit">
           Зарегистрироваться
         </button>
+        <p className="auth1-p">
+          Уже есть аккаунт?
+          <Link className="registr" to="/login">
+            Войти
+          </Link>
+        </p>
       </form>
-      <p className="auth1-p">
-        Уже есть аккаунт?
-        <Link className="registr" to="/login">
-          Войти
-        </Link>
-      </p>
-    </div>
   );
 };
