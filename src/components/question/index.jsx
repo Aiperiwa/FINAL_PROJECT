@@ -6,6 +6,7 @@ export const Question = ({ data }) => {
 
     <div className="q-item">
       <h3>{data.text}</h3> 
+      <img  src={ data.image } alt="image" />
       <div className="form">
         {
           data.variants.map((v) => (
