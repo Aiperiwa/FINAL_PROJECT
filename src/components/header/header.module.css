@@ -147,9 +147,9 @@
   }
 
   
-  .link:hover {
+  /* .link:hover {
     background-color: #e91818;
-  }
+  } */
   
   .pdd {
     font-size: 15px;
@@ -165,7 +165,7 @@
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 450px) {
   .header {
     position: relative;
   }

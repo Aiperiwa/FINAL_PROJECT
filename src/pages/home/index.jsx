@@ -3,8 +3,6 @@ import HomeImage2 from '../../img/loader2.gif'
 
 import Style from './home.module.css'
 import Carousel from 'react-bootstrap/Carousel';
-
-
 export const HomePage = () => {
   return (
     <Carousel  fade>

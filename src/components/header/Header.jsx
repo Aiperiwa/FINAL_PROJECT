@@ -29,7 +29,7 @@ const Header = () => {
         <Link to="/">
           <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
         </Link>
-        <h1>ROAD RULES</h1>
+        {/* <h1>ROAD RULES</h1> */}
         <nav className={`${NavStyle.nav} ${menuOpen ? NavStyle.active : ''}`}>
           {
             links.map((link) => (

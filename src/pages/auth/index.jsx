@@ -67,7 +67,7 @@ export const RegistrationPage = () => {
           value={name}
           onChange={handleNameChange}
         />
-        {nameError && <div style={{ color: 'red' }}>{nameError}</div>}
+        {nameError && <div style={{ color: '#a10505' }}>{nameError}</div>}
         <input
           className="block1"
           type="password"
@@ -76,7 +76,7 @@ export const RegistrationPage = () => {
           value={password}
           onChange={handlePasswordChange}
         />
-        {passwordError && <div style={{ color: 'red' }}>{passwordError}</div>}
+        {passwordError && <div style={{ color: '#a10505' }}>{passwordError}</div>}
         <input
           className="block1"
           type="password"

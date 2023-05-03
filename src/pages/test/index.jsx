@@ -53,7 +53,7 @@ export const TestPage = () => {
               <Question key={e.id} data={e} />
             ))
           }
-          <button>Проверить</button>
+          <button className={NavStyle.check} >Проверить</button>
         </div>
       )}
     </div>

@@ -9,6 +9,21 @@ h1 {
     margin-bottom: 30px;
 }
 
+.check {
+    gap: 10px;
+    border-radius: 20px;
+  
+    width: 250px;
+    height: 60px;
+  
+    border: 1px solid #86C232;
+    background-color: #86C232;
+  
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
 
 .bigContainer {
     display: flex;
@@ -18,7 +33,7 @@ h1 {
 
     width: 80%;
 
-    background-color: white;
+    background-color: #61892F;
     box-shadow: 0px 4px 40px rgba(116, 124, 153, 0.74);
     border-radius: 20px;
 
