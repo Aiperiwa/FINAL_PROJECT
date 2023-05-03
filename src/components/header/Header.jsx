@@ -5,12 +5,12 @@ import { useState } from 'react'
 
 const links = [
   {
-    id: 2,
+    id: 1,
     text: 'Главная',
     route: '/'
   },
   {
-    id: 5,
+    id: 2,
     text: 'Пройти тестирование',
     route: '/test'
   },
@@ -29,6 +29,7 @@ const Header = () => {
         <Link to="/">
           <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
         </Link>
+        <h1>ROAD RULES</h1>
         <nav className={`${NavStyle.nav} ${menuOpen ? NavStyle.active : ''}`}>
           {
             links.map((link) => (

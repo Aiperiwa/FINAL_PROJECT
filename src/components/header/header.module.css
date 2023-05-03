@@ -19,7 +19,7 @@
 }
 
 .logo:hover {
-  animation: none;
+ fill: white;
 }
 
 .link {
@@ -46,7 +46,7 @@
   font-weight: 500;
 }
 
-.nav:hover {
+.link:hover {
   color: #61892F;
 }
 

@@ -1,9 +1,3 @@
-/* body {
-  background: linear-gradient(180deg, #506ED9 0%, #7AD8D2 100%);
-  width: 100%;
-  height: 150vh;
-} */
-
 .container {
   display: flex;
   flex-direction: column;
@@ -43,8 +37,8 @@
   border-radius: 20px;
   width: 444px;
   height: 60px;
-  margin-bottom: 30px;
-
+  /* margin-bottom: 30px; */
+  margin-top: 30px;
   background-color: #EEEEEE;
   font-family: 'Mulish', sans-serif;
   font-style: italic;
@@ -55,6 +49,10 @@
   border: none;
 }
 
+.block1:first-of-type {
+  margin-top: 0;
+}
+
 .enter {
   gap: 10px;
   border-radius: 20px;
@@ -62,8 +60,7 @@
   width: 444px;
   height: 60px;
 
-  margin-left: 68px;
-  margin-right: 67px;
+  margin: 30px 68px 0;
 
   border: 1px solid #86C232;
   background-color: #86C232;

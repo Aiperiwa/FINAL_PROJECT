@@ -12,4 +12,16 @@
 .logo {
   width: 100px;
   height: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  color: rgb(26, 25, 24);
+}
+
+span {
+  font-size: 20px;
+  color:rgb(4, 187, 56);
 }
