@@ -1,4 +1,4 @@
-.header {
+.header_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +73,7 @@
 
 /* Styles for burger menu */
 @media only screen and (max-width: 900px) {
-  .header {
+  .header_wrapper {
     position: relative;
   }
 
@@ -170,7 +170,7 @@
     justify-content: center;
   }
   
-  .header {
+  .header_wrapper {
     height: 50px;
     padding: 20px;
   }

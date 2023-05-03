@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={NavStyle.header}>
+      <div className={NavStyle.header_wrapper}>
         <Link to="/">
           <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
         </Link>
@@ -48,7 +48,7 @@ const Header = () => {
           <span className={NavStyle.line}></span>
           <span className={NavStyle.line}></span>
         </button>
-      </header>
+      </div>
     </>
   )
 }
