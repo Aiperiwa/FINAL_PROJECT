@@ -56,6 +56,7 @@ export const RegistrationPage = () => {
   };
 
   return (
+    fetch('http://13.50.246.190/api/accounts/register/'),
       <form className="container2" onSubmit={handleSubmit}>
         <h4 className="auth1">Регистрация</h4>
         <input
