@@ -16,7 +16,7 @@ export const HomePage = () => {
           alt="image"
         />
         <Carousel.Caption>
-          <h3>Уверенность за рулем на всю жизнь.</h3>
+          <h3 className={ Style.carouselText}>Уверенность за рулем на всю жизнь.</h3>
           {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>. */}
         </Carousel.Caption>
       </Carousel.Item>
