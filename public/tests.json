@@ -93,5 +93,100 @@
         "text": "На обоих."
       }
     ]
+  },
+  {
+    "id": "q6",
+    "text": "Кому Вы обязаны уступить дорогу при повороте налево?",
+    "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNH13FZtuGi7hwZVqyPGSv7558yM4X8JvKpe3OojW_VWW4L48z",
+    "variants": [
+      {
+        "id": "q6-v1",
+        "text": "Только автобусу"
+      },
+      {
+        "id": "q6-v2",
+        "text": "Только легковому автомобилю"
+      },
+      {
+        "id": "q6-v3",
+        "text": "Никому."
+      }
+    ]
+  },
+  {
+    "id": "q7",
+    "text": "Сколько полос для движения имеет данная дорога?",
+    "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYS1rx_KCop8rNgRQcYM8IJdW0e4e7bEYkypReGLiUI0AQsxj9",
+    "variants": [
+      {
+        "id": "q7-v1",
+        "text": "Две"
+      },
+      {
+        "id": "q7-v2",
+        "text": "Четыре."
+      },
+      {
+        "id": "q7-v3",
+        "text": "Пять"
+      }
+    ]
+  },
+  {
+    "id": "q8",
+    "text": "Можно ли Вам въехать на мост первым?",
+    "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSdnWGZTA2cPb_9_hEnKjPCuiHeRgL8VXkOIWbtqDouESG7Z6KG",
+    "variants": [
+      {
+        "id": "q8-v1",
+        "text": "Можно."
+      },
+      {
+        "id": "q8-v2",
+        "text": "Можно, если Вы не затрудните движение встречному автомобилю"
+      },
+      {
+        "id": "q8-v3",
+        "text": "Нельзя"
+      }
+    ]
+  },
+  {
+    "id": "q9",
+    "text": "Что запрещено в зоне действия этого знака?",
+    "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSE2C50Mgwp3VrHp3cYk3pBgebapvSS-xY0erjwc1RJ2W3m_too",
+    "variants": [
+      {
+        "id": "q9-v1",
+        "text": "Движение любых транспортных средств"
+      },
+      {
+        "id": "q9-v2",
+        "text": "Движение всех транспортных средств со скоростью не более 20 км/ч"
+      },
+      {
+        "id": "q9-v3",
+        "text": "Движение механических транспортных средств. "
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "text": "Поднятая вверх рука водителя легкового автомобиля является сигналом, информирующим Вас о его намерении:",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTovc6yeLBNboPb3x5sSVQvLYSZiiPP97Y6WR_u2joR04w9mdiX",
+    "variants": [
+      {
+        "id": "q10-v1",
+        "text": "Повернуть направо"
+      },
+      {
+        "id": "q10-v2",
+        "text": "Продолжить движение прямо"
+      },
+      {
+        "id": "q10-v3",
+        "text": "Снизить скорость, чтобы остановиться и уступить дорогу мотоциклу. "
+      }
+    ]
   }
 ]
