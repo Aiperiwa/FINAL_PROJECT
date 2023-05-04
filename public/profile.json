@@ -2,16 +2,25 @@
   {
     "id": 1,
     "date": "2023-04-27",
-    "score": "High"
+    "score": "High",
+    "timer": "10:21"
   },
   {
     "id": 2,
     "date": "2023-04-26",
-    "score": "Low"
+    "score": "Low",
+    "timer": "10:21"
   },
   {
     "id": 3,
     "date": "2023-04-25",
-    "score": "Medium"
+    "score": "Medium",
+    "timer": "10:21"
+  },
+  {
+    "id": 4,
+    "date": "2023-04-25",
+    "score": "Medium",
+    "timer": "10:21"
   }
 ]
