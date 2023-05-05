@@ -22,6 +22,11 @@ h1 {
     margin-bottom: 30px;
 }
 
+p {
+    text-align: center;
+    font-size: 22px;
+}
+
 
 .btnContainer {
     display: flex;
