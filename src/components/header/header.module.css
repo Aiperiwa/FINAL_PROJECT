@@ -46,6 +46,10 @@
   font-weight: 500;
 }
 
+.enter:active {
+  transform: scale(0.9);
+  }
+
 .link:hover {
   color: #61892F;
 }

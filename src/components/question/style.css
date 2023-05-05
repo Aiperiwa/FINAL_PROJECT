@@ -17,10 +17,13 @@ input[type='radio'] {
     margin-right: 10px;
 }
 
+
+
+@media (max-width: 450px) {
 img {
     width: 100%;
 }
-
+}
 
 
 
