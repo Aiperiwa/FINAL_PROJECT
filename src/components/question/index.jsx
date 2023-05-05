@@ -5,7 +5,9 @@ export const Question = ({ data }) => {
   return (
 
     <div className="q-item">
-      <h3>{data.text}</h3> 
+      <h3 className='test_quest'>{data.text}</h3>
+      
+      <img  src={ data.image } alt="image" />
       <div className="form">
         {
           data.variants.map((v) => (
