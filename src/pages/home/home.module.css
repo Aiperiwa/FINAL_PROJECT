@@ -9,7 +9,8 @@
 .homeImg {
     width: 100%;
     height: 100%;
-    border-radius: 10%;
+    object-fit: cover;
+    margin-left: 0;
 }
 
 .loader {
@@ -20,4 +21,15 @@
 .error {
     width: 500px;
     height: 200px;
+}
+
+.homeImg2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 0;
+}
+
+.carouselText {
+    color: black;
 }

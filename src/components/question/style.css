@@ -1,21 +1,24 @@
-.variant {
-    font-size: 16px;
+.test_quest{
+    font-size: 20px;
 }
-
 
 .q-item {
     margin-bottom: 50px;
 }
 
-.test_quest{
-    font-size: 20px;
-    margin-left: 30px;
+.variant {
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.form {
-    margin-left: 30px;
+input[type='radio'] {
+    margin-right: 10px;
 }
 
 img {
-    margin-left: 30px;
+    width: 100%;
 }
+
+
+
+

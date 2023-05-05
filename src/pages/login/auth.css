@@ -59,7 +59,7 @@
 
   margin: 30px 68px 0;
 
-  border: 1px solid #86C232;
+  border: none;
   background-color: #86C232;
 
   font-family: 'Mulish', sans-serif;
@@ -67,8 +67,14 @@
   font-size: 20px;
   color: white;
 }
+
+.link {
+  text-decoration: none;
+  color: #fff;
+
+}
 .enter:hover {
-  box-shadow: #61892F;
+  box-shadow: #cedabf;  
 
 }
 

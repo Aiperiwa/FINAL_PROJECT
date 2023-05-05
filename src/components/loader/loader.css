@@ -19,3 +19,11 @@
       transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 450px) {
+  .wheel {
+    width: 60px;
+    height: 60px;
+  } 
+  
+}

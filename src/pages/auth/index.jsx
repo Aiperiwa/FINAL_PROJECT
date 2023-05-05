@@ -52,55 +52,58 @@ export const RegistrationPage = () => {
         Confirm Password: ${confirmPassword}
         Email: ${email}
       `);
+      fetch('http://13.50.246.190/api/accounts/register/', {
+        method: 'POST'
+      })
     }
   };
 
   return (
-      <form className="container2" onSubmit={handleSubmit}>
-        <h4 className="auth1">Регистрация</h4>
-        <input
-          className="block1"
-          type="text"
-          placeholder="Имя пользователя"
-          id="name"
-          value={name}
-          onChange={handleNameChange}
-        />
-        {nameError && <div style={{ color: '#a10505' }}>{nameError}</div>}
-        <input
-          className="block1"
-          type="password"
-          placeholder="Пароль"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-        {passwordError && <div style={{ color: '#a10505' }}>{passwordError}</div>}
-        <input
-          className="block1"
-          type="password"
-          placeholder="Повторить пароль"
-          id="confirmPassword"
-          value={confirmPassword}
-          onChange={handleConfirmPasswordChange}
-        />
-        <input
-          className="block1"
-          type="Email"
-          placeholder="Email"
-          id="Email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-        <button className="enter" type="submit">
-          Зарегистрироваться
-        </button>
-        <p className="auth1-p">
-          Уже есть аккаунт?
-          <Link className="registr" to="/login">
-            Войти
-          </Link>
-        </p>
-      </form>
+    <form className="container2" onSubmit={handleSubmit}>
+      <h4 className="auth1">Регистрация</h4>
+      <input
+        className="block1"
+        type="text"
+        placeholder="Имя пользователя"
+        id="name"
+        value={name}
+        onChange={handleNameChange}
+      />
+      {nameError && <div style={{ color: '#a10505' }}>{nameError}</div>}
+      <input
+        className="block1"
+        type="password"
+        placeholder="Пароль"
+        id="password"
+        value={password}
+        onChange={handlePasswordChange}
+      />
+      {passwordError && <div style={{ color: '#a10505' }}>{passwordError}</div>}
+      <input
+        className="block1"
+        type="password"
+        placeholder="Повторить пароль"
+        id="confirmPassword"
+        value={confirmPassword}
+        onChange={handleConfirmPasswordChange}
+      />
+      <input
+        className="block1"
+        type="Email"
+        placeholder="Email"
+        id="Email"
+        value={email}
+        onChange={handleEmailChange}
+      />
+      <button className="enter" type="submit">
+        Зарегистрироваться
+      </button>
+      <p className="auth1-p">
+        Уже есть аккаунт?
+        <Link className="registr" to="/login">
+          Войти
+        </Link>
+      </p>
+    </form>
   );
 };

@@ -56,7 +56,7 @@ const CountDown = (props) => {
             <div className="timer-block-wrap">
                 {/* <span><a className="link-to-home-page" href="/">На главную</a></span> */}
                 <div className="time-error-block">
-                    <span className='error-list'>Ошибки: {resultInfo.errors}/2</span>
+                    {/* <span className='error-list'>Ошибки: {resultInfo.errors}/2</span> */}
                     <p className="timer-block-time">Время:
                         {`
                              ${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}

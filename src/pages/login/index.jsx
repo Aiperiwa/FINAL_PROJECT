@@ -49,7 +49,7 @@ export const AuthorizationPage = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)} 
           />
-          <button className='enter' onClick={handleLogin}>Войти</button>
+          <button className='enter' onClick={handleLogin}><Link className='link' to='/profile'>Войти</Link></button>
           <p className='auth1-p' >Нет аккаунта? <Link className='registr' to="/auth">Зарегистрируйся</Link></p>
         </form>
       );

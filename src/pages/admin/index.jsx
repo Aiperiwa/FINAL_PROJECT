@@ -1,6 +1,8 @@
+import NavStyle from "./admin.module.css"
+
 export const QuestionListPage = () => {
   return (
-    <div>
+    <div className={NavStyle.adminContainer}>
       QuestionListPage
     </div>
   )
