@@ -8,9 +8,9 @@ import { RegistrationPage } from './pages/auth'
 import { HomePage } from './pages/home'
 import { ProfilePage } from './pages/profile'
 import { QuestionListPage } from './pages/admin'
-import { TestPage }from './pages/test'
+import { TestPage } from './pages/test'
 import { TestFormPage } from './pages/testForm'
-import { NotFoundPage } from './pages/404/404'
+import { NotFoundPage } from './pages/404'
 
 
 

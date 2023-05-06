@@ -101,7 +101,7 @@ export const RegistrationPage = () => {
       <p className="auth1-p">
         Уже есть аккаунт?
         <Link className="registr" to="/login">
-          Войти
+           Войти
         </Link>
       </p>
     </form>

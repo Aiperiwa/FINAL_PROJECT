@@ -18,8 +18,8 @@
   font-family: 'Mulish', sans-serif;
   font-weight: 700;
   font-size: 36px;
-  margin-bottom: 30px;
   color: #fff;
+  margin: 0;
 }
 
 .registr {
@@ -31,7 +31,6 @@
 }
 
 .block1 {
-  gap: 10px;
   border-radius: 20px;
   width: 80%;
   height: 60px;
@@ -45,12 +44,8 @@
   border: none;
 }
 
-.block1:first-of-type {
-  margin-top: 0;
-}
 
 .enter {
-  gap: 10px;
   border-radius: 20px;
 
   width: 80%;
@@ -88,6 +83,36 @@
   margin-top: 30px;
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    width: 50%;
+    height: 350px;
+  }
+
+  .block1 {
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 20px;
+
+  }
+
+  .auth1 {
+    font-size: 26px;
+  }
+
+  .enter {
+    width: 80%;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .auth1-p {
+    font-size: 15px;
+    margin: 20px 0 0;
+  }
+}
 
 @media screen and (max-width: 450px) {
   .container {
@@ -105,7 +130,6 @@
 
   .auth1 {
     font-size: 26px;
-    margin-bottom: 10px;
   }
 
   .enter {

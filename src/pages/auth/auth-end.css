@@ -21,6 +21,13 @@ form {
   align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .container2 {
+    width: 50%;
+    height: 450px;
+  } 
+  }
+
 
 @media screen and (max-width: 450px) {
 .container2 {
@@ -28,5 +35,6 @@ form {
   height: 400px;
 } 
 }
+
   
 

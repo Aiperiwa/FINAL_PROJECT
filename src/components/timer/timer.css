@@ -1,5 +1,5 @@
 .timer-block {
-    width: 300px;
+    width: 200px;
     height: 100px;
     position: fixed;
     top: 80%;
@@ -11,18 +11,12 @@
     align-items: center;
 }
 
-
-.link-to-home-page:hover {
-    color: #61892F;
-}
-
 .timer-block-time {
     font-weight: 500;
     font-size: 18px;
     color: #fff;
     margin: 0;
 }
-
 
 .time-error-block {
     display: flex;
@@ -31,16 +25,14 @@
 
 
 @media (max-width: 900px) {
-    .timer-block-wrap {
-        padding: 0px;
+    .timer-block {
+        width: 150px;
+        height: 100px;
+        border-radius: 50%;
     }
 
     .timer-block-time {
-        font-size: 18px;
-    }
-
-    .error-list {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
