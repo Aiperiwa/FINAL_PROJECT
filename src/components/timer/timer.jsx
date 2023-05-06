@@ -4,7 +4,7 @@ import "./timer.css";
 
 const CountDown = (props) => {
     const {
-        minutes = 20,
+        minutes = 1,
         seconds = 0,
         getTimerInfo,
         isOver,

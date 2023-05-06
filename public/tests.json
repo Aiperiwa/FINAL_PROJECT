@@ -1,6 +1,7 @@
 [
   {
     "id": "q1",
+    "questionNumber": 1,
     "text": "По какой траектории Вам разрешено выполнить разворот?",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJ5g0rVbt02jaKOdlyMDG4IEyBZwPHH4_ON3uoPfoDwucmKA4u",
     "variants": [
@@ -20,6 +21,7 @@
   },
   {
     "id": "q2",
+    "questionNumber": 2,
     "text": "С какой скоростью Вы можете продолжить движение вне населенного пункта по левой полосе на легковом автомобиле?",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7_eq_SCMCvDNLH4xvfJA1DTz1fJLmjn1hrdVFWMAnrrhBUVzd",
     "variants": [
@@ -39,6 +41,7 @@
   },
   {
     "id": "q3",
+    "questionNumber": 3,
     "text": "Можно ли водителю легкового автомобиля выполнить обгон грузовых автомобилей вне населенного пункта по такой траектории?",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXuFcp3Q-60lHeYZWIRH1tU0pT7jCuJDeRO4eXssKkQUdn50cs",
     "variants": [
@@ -58,6 +61,7 @@
   },
   {
     "id": "q4",
+    "questionNumber": 4,
     "text": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
     "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOzlpBwpS8Jp2qjauRYAO2Lkq8Xz8teu9NBC4rar5m72nJilfl",
     "variants": [
@@ -77,6 +81,7 @@
   },
   {
     "id": "q5",
+    "questionNumber": 5,
     "text": "Двигаясь по левой полосе, водитель намерен перестроиться на правую. На каком из рисунков показана ситуация, в которой он обязан уступить дорогу?",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3YSnTvOy9VtpJcSRfBT-CEDgZ4KALTEn9ZWRWMV9de6gVGJ-t",
     "variants": [
@@ -96,6 +101,7 @@
   },
   {
     "id": "q6",
+    "questionNumber": 6,
     "text": "Кому Вы обязаны уступить дорогу при повороте налево?",
     "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNH13FZtuGi7hwZVqyPGSv7558yM4X8JvKpe3OojW_VWW4L48z",
     "variants": [
@@ -115,6 +121,7 @@
   },
   {
     "id": "q7",
+    "questionNumber": 7,
     "text": "Сколько полос для движения имеет данная дорога?",
     "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYS1rx_KCop8rNgRQcYM8IJdW0e4e7bEYkypReGLiUI0AQsxj9",
     "variants": [
@@ -134,6 +141,7 @@
   },
   {
     "id": "q8",
+    "questionNumber": 8,
     "text": "Можно ли Вам въехать на мост первым?",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSdnWGZTA2cPb_9_hEnKjPCuiHeRgL8VXkOIWbtqDouESG7Z6KG",
     "variants": [
@@ -153,6 +161,7 @@
   },
   {
     "id": "q9",
+    "questionNumber": 9,
     "text": "Что запрещено в зоне действия этого знака?",
     "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSE2C50Mgwp3VrHp3cYk3pBgebapvSS-xY0erjwc1RJ2W3m_too",
     "variants": [
@@ -172,6 +181,7 @@
   },
   {
     "id": "q10",
+    "questionNumber": 10,
     "text": "Поднятая вверх рука водителя легкового автомобиля является сигналом, информирующим Вас о его намерении:",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTovc6yeLBNboPb3x5sSVQvLYSZiiPP97Y6WR_u2joR04w9mdiX",
     "variants": [
@@ -191,6 +201,7 @@
   },
   {
     "id": "q11",
+    "questionNumber": 11,
     "text": "Можно ли Вам выполнить разворот в этом месте?",
     "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRmcN_h0bvXZcYkmrCbmPYHicpfosFHlRpayD4gg2A6J1DCAu0Z",
     "variants": [
@@ -210,6 +221,7 @@
   },
   {
     "id": "q12",
+    "questionNumber": 12,
     "text": "Вы можете начать обгон:",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRJExoHyDah54SKR50COZJvyMC-rPlO-GOtqYscFhk5qRwECDp-",
     "variants": [
@@ -229,6 +241,7 @@
   },
   {
     "id": "q13",
+    "questionNumber": 13,
     "text": "По какой траектории Вам можно выполнить поворот налево?",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJS4FI35oet4fjsKGn4ndigcXHKT-0QokRxJP_nqquMnj8PAFg",
     "variants": [
@@ -248,6 +261,7 @@
   },
   {
     "id": "q14",
+    "questionNumber": 14,
     "text": "Вы намерены повернуть направо. Можете ли Вы приступить к повороту?",
     "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYRXLgoRoRfvHMzbQo89dXOvTipDyWuFpnlWyRCyeH6X1k1TZ8",
     "variants": [
@@ -267,6 +281,7 @@
   },
   {
     "id": "q15",
+    "questionNumber": 15,
     "text": "Сколько пересечений проезжих частей имеет этот перекресток?",
     "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ1YMgeOOkEomYu3153MnlReuZFT3O3KJgI_4dMPx97B32o7dFn",
     "variants": [
@@ -286,6 +301,7 @@
   },
   {
     "id": "q16",
+    "questionNumber": 16,
     "text": "Эти знаки обязывают соблюдать дистанцию:",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvweFbpX5xQXtrj_MgnRkLl2Oe7aSNe8QAr7DR3n8uz_-SIoXW",
     "variants": [
@@ -305,6 +321,7 @@
   },
   {
     "id": "q17",
+    "questionNumber": 17,
     "text": "В каких направлениях вам разрешено продолжить движение?",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1NvkbJv2gCj2Rto6o7-rsh67anxj3QRnXfDGXto5c8OUPKo24",
     "variants": [
@@ -324,6 +341,7 @@
   },
   {
     "id": "q18",
+    "questionNumber": 18,
     "text": "На каком расстоянии от знака Вам разрешено поставить автомобиль на стоянку?",
     "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPOYz8ccJmWRjN6AQoC5tMadE2TprWybDYLLeqAISQwbrQlFIf",
     "variants": [
@@ -343,6 +361,7 @@
   },
   {
     "id": "q19",
+    "questionNumber": 19,
     "text": "Эти знаки предупреждают вас:",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6I__cEkLb7G456dK0-nVkfqKNPdvil1X4cgW-KvylNaJSMTY",
     "variants": [
@@ -362,6 +381,7 @@
   },
   {
     "id": "q20",
+    "questionNumber": 20,
     "text": "Разрешено ли Вам поставить автомобиль на стоянку в этом месте?",
     "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLkq9RjLqXKD6T8Sn-ElygA764fso4dKdaFNmFy9qWECrWjTB-",
     "variants": [
