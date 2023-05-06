@@ -59,7 +59,7 @@ const CountDown = (props) => {
                     {/* <span className='error-list'>Ошибки: {resultInfo.errors}/2</span> */}
                     <p className="timer-block-time">Время:
                         {`
-                             ${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}
+                             ${m.toString().padStart(1, '0')}:${s.toString().padStart(2, '0')}
                         `}
                     </p>
                 </div>
