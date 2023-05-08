@@ -12,7 +12,7 @@ export const AuthorizationPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('http://localhost:1717/login', {
+    fetch('http://13.53.186.70/api/auth_token/', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: {
@@ -25,8 +25,8 @@ export const AuthorizationPage = () => {
       // console.log('aa', data)
 
       localStorage.setItem('token', data.token)
-      if (data.role === 'admin') navigate('/questionList')
-      else navigate('/')
+      //if (data.role === 'admin') navigate('/questionList')
+      navigate('/')
     })
   } 
    

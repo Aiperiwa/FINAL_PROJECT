@@ -57,7 +57,7 @@
 
 
 import NavStyle from './header.module.css'
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 import { useState, useRef, useEffect } from 'react'
 
@@ -77,6 +77,7 @@ const links = [
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navRef = useRef(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -94,6 +95,11 @@ const Header = () => {
     setMenuOpen(!menuOpen)
   }
 
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    navigate('/')
+  }
+
   return (
     <>
       <div className={NavStyle.header_wrapper}>
@@ -109,9 +115,21 @@ const Header = () => {
             ))
           }
           <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
-          <Link to='/login'>
-            <button className={NavStyle.enter}>Войти</button>
-          </Link>
+          {
+            localStorage.getItem('token')
+            ? (
+              <div>
+                <Link to='/profile'>
+                  <button className={NavStyle.enter}>Profile</button>
+                </Link>
+                <button onClick={handleLogout} className={NavStyle.enter}>log out</button>
+              </div>
+            ) : (
+              <Link to='/login'>
+                <button className={NavStyle.enter}>Войти</button>
+              </Link>
+            )
+          }
         </nav>
         <button className={`${NavStyle.burger} ${menuOpen ? NavStyle.active : ''}`} onClick={toggleMenu}>
           <span className={NavStyle.line}></span>

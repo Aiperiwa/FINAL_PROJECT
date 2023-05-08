@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './auth-end.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const RegistrationPage = () => {
-  const [name, setName] = useState('');
+  const [username, setName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
   const [nameError, setNameError] = useState('');
+  const [loading, setLoading] = useState(false);
   const [passwordError, setPasswordError] = useState('');
+  const navigate = useNavigate()
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -26,37 +28,57 @@ export const RegistrationPage = () => {
     setEmail(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    let nameIsValid = true;
-    let passwordIsValid = true;
+ 
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  let nameIsValid = true;
+  let passwordIsValid = true;
 
-    if (name.length < 3) {
-      setNameError('Имя пользователя должно содержать не менее 3 символов');
-      nameIsValid = false;
-    } else {
-      setNameError('');
-    }
+  if (username.length < 3) {
+    setNameError('Имя пользователя должно содержать не менее 3 символов');
+    nameIsValid = false;
+  } else {
+    setNameError('');
+  }
 
-    if (password.length < 5) {
-      setPasswordError('Пароль должен содержать не менее 5 символов');
-      passwordIsValid = false;
-    } else {
-      setPasswordError('');
-    }
+  if (password.length < 5) {
+    setPasswordError('Пароль должен содержать не менее 5 символов');
+    passwordIsValid = false;
+  } else {
+    setPasswordError('');
+  }
 
-    if (nameIsValid && passwordIsValid) {
-      console.log(`
-        Name: ${name}
-        Password: ${password}
-        Confirm Password: ${confirmPassword}
-        Email: ${email}
-      `);
-      fetch('http://13.50.246.190/api/accounts/register/', {
-        method: 'POST'
+  if (nameIsValid && passwordIsValid) {
+    setLoading(true)
+    const response = await fetch('http://13.53.186.70/api/register/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username,
+        password,
+        password2: confirmPassword,
+        email
       })
+    });
+
+    const data = await response.json()
+    setLoading(false)
+
+    if (response.ok) {
+      // регистрация прошла успешно
+      console.log('Регистрация прошла успешно!');
+      localStorage.setItem('token', data.token)
+      navigate('/')
+    } else {
+      // обработка ошибок
+      const errorResponse = await response.json();
+      console.log(`Произошла ошибка при регистрации: ${errorResponse.error}`);
     }
-  };
+  }
+};
+
 
   return (
     <form className="container2" onSubmit={handleSubmit}>
@@ -66,7 +88,7 @@ export const RegistrationPage = () => {
         type="text"
         placeholder="Имя пользователя"
         id="name"
-        value={name}
+        value={username}
         onChange={handleNameChange}
       />
       {nameError && <div style={{ color: '#a10505' }}>{nameError}</div>}
@@ -98,6 +120,7 @@ export const RegistrationPage = () => {
       <button className="enter" type="submit">
         Зарегистрироваться
       </button>
+      {loading && 'Loading'}
       <p className="auth1-p">
         Уже есть аккаунт?
         <Link className="registr" to="/login">
@@ -107,3 +130,4 @@ export const RegistrationPage = () => {
     </form>
   );
 };
+
