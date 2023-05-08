@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './auth-end.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const RegistrationPage = () => {
   const [username, setName] = useState('');
@@ -8,7 +8,9 @@ export const RegistrationPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
   const [nameError, setNameError] = useState('');
+  const [loading, setLoading] = useState(false);
   const [passwordError, setPasswordError] = useState('');
+  const navigate = useNavigate()
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -47,7 +49,8 @@ const handleSubmit = async (event) => {
   }
 
   if (nameIsValid && passwordIsValid) {
-    const response = await fetch('http://13.53.186.70/api/admin/register/', {
+    setLoading(true)
+    const response = await fetch('http://13.53.186.70/api/register/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -55,13 +58,19 @@ const handleSubmit = async (event) => {
       body: JSON.stringify({
         username,
         password,
+        password2: confirmPassword,
         email
       })
     });
 
+    const data = await response.json()
+    setLoading(false)
+
     if (response.ok) {
       // регистрация прошла успешно
       console.log('Регистрация прошла успешно!');
+      localStorage.setItem('token', data.token)
+      navigate('/')
     } else {
       // обработка ошибок
       const errorResponse = await response.json();
@@ -111,10 +120,11 @@ const handleSubmit = async (event) => {
       <button className="enter" type="submit">
         Зарегистрироваться
       </button>
+      {loading && 'Loading'}
       <p className="auth1-p">
         Уже есть аккаунт?
         <Link className="registr" to="/login">
-          Войти
+           Войти
         </Link>
       </p>
     </form>

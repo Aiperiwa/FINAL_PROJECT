@@ -2,29 +2,35 @@ import { useEffect, useState } from "react"
 import { mockFetch } from "../../utils/mockFetch"
 import HistoryScore from "../../components/HistoryScore"
 import NavStyle from "./profile.module.css"
+import { useNavigate } from "react-router-dom"
 
 
 export const ProfilePage = () => {
   const [events, setEvents] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const navigate = useNavigate()
 
   useEffect (() => {
-    setLoading(true)
-    mockFetch('/profile.json')
-    .then(res => res.json())
-    .then(data => {
-      setEvents(data)
-    })
-    .catch((err) => {
-      setError('произошла ошибка')
+    if (localStorage.getItem('token')) {
+      setLoading(true)
+      mockFetch('/profile.json')
+      .then(res => res.json())
+      .then(data => {
+        setEvents(data)
+      })
+      .catch((err) => {
+        setError('произошла ошибка')
 
-    })
-    .finally(() => {
-      setLoading(false)
-    })
-
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+    } else {
+      navigate('/login')
+    }
   }, [])
+
   return (
     <div className={NavStyle.profContainer} >
       <h1>Личный кабинет</h1>
@@ -34,7 +40,7 @@ export const ProfilePage = () => {
         <tr>
           <th className={NavStyle.tableTh}>Date</th>
           <th className={NavStyle.tableTh}>Score</th>
-          <th className={NavStyle.tableTh}>Timer</th>
+          <th className={NavStyle.tableTh}>Time</th>
         </tr>
       </thead>
       <tbody>
