@@ -37,6 +37,8 @@ export const TestPage = () => {
 
   const endTest = () => { 
     // написать код который отправляет все ваши ответы на 20 вопросов в бэк и переводит на страницу результата 
+    setIsModalVisible(true);
+
 }
 
   return (

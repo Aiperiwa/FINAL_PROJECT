@@ -1,10 +1,7 @@
-
-
 import NavStyle from './header.module.css'
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 import { useState, useRef, useEffect } from 'react'
-
 const links = [
   {
     id: 1,
@@ -17,12 +14,10 @@ const links = [
     route: '/test'
   },
 ]
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navRef = useRef(null)
   const navigate = useNavigate()
-
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -34,16 +29,13 @@ const Header = () => {
       document.removeEventListener('mousedown', handleOutsideClick)
     }
   }, [navRef])
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
   }
-
   const handleLogout = () => {
     localStorage.removeItem('token')
     navigate('/')
   }
-
   return (
     <>
       <div className={NavStyle.header_wrapper}>
@@ -66,7 +58,13 @@ const Header = () => {
                 <Link to='/profile'>
                   <button className={NavStyle.enter}>Айпери</button>
                 </Link>
-              )
+                <button onClick={handleLogout} className={NavStyle.enter}>log out</button>
+              </div>
+            ) : (
+              <Link to='/login'>
+                <button className={NavStyle.enter}>Войти</button>
+              </Link>
+            )
           }
         </nav>
         <button className={`${NavStyle.burger} ${menuOpen ? NavStyle.active : ''}`} onClick={toggleMenu}>
@@ -78,5 +76,4 @@ const Header = () => {
     </>
   )
 }
-
 export default Header
