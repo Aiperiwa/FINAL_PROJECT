@@ -12,7 +12,7 @@ export const AuthorizationPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    fetch('http://13.53.186.70/api/auth_token/', {
+    fetch('http://16.16.143.176/api/auth_token/', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: {

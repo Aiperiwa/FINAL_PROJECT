@@ -50,7 +50,7 @@ const handleSubmit = async (event) => {
 
   if (nameIsValid && passwordIsValid) {
     setLoading(true)
-    const response = await fetch('http://13.53.186.70/api/register/', {
+    const response = await fetch('http://16.16.143.176//api/register/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
