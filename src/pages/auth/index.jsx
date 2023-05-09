@@ -29,14 +29,48 @@ export const RegistrationPage = () => {
   };
 
  
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    let nameIsValid = true;
-    let passwordIsValid = true;
-  
-    if (username.length < 3) {
-      setNameError('Имя пользователя должно содержать не менее 3 символов');
-      nameIsValid = false;
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  let nameIsValid = true;
+  let passwordIsValid = true;
+
+  if (username.length < 3) {
+    setNameError('Имя пользователя должно содержать не менее 3 символов');
+    nameIsValid = false;
+  } else {
+    setNameError('');
+  }
+
+  if (password.length < 5) {
+    setPasswordError('Пароль должен содержать не менее 5 символов');
+    passwordIsValid = false;
+  } else {
+    setPasswordError('');
+  }
+
+  if (nameIsValid && passwordIsValid) {
+    setLoading(true)
+    const response = await fetch('http://16.16.143.176//api/register/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username,
+        password,
+        password2: confirmPassword,
+        email
+      })
+    });
+
+    const data = await response.json()
+    setLoading(false)
+
+    if (response.ok) {
+      // регистрация прошла успешно
+      console.log('Регистрация прошла успешно!');
+      localStorage.setItem('token', data.token)
+      navigate('/')
     } else {
       setNameError('');
     }

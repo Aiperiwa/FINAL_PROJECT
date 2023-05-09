@@ -3,13 +3,13 @@ import React from "react";
 import "./timer.css";
 
 const CountDown = (props) => {
-  const {
-    minutes = 20,
-    seconds = 0,
-    getTimerInfo,
-    isOver,
-    // resultInfo
-  } = props;
+    const {
+        minutes = 20,
+        seconds = 0,
+        getTimerInfo,
+        isOver,
+        resultInfo
+    } = props
 
   const [[m, s], setTime] = React.useState([minutes, seconds]);
   const [over, setOver] = React.useState(isOver);
