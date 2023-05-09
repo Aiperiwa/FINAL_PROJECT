@@ -49,21 +49,21 @@ p {
     align-items: center;
     z-index: 9999;
     border-radius: 30px;
-  }
-  
-  .btnClose {
+}
+
+.btnClose {
     background-color: #86C232;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .modal-footer button:hover {
+}
+
+.modal-footer button:hover {
     background-color: #0062cc;
-  }
-  
+}
+
 
 @media (max-width: 900px) {
     .bigContainer {
@@ -74,25 +74,11 @@ p {
 @media (max-width: 450px) {
     .bigContainer {
         width: 95%;
+    } 
+
+    .modal {
+        left: 10%;
+        width: 70%;
     }
 
-    .btnContainer {
-        display: flex;
-        justify-content: center;
-    }
-
-
-.modal {
-    left: 10%;
-    width: 70%;
-    height: 50%;
-    background-color: rgba(214, 204, 204, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    border-radius: 30px;
-  }
-  
 }

@@ -117,18 +117,18 @@ const Header = () => {
           <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
           {
             localStorage.getItem('token')
-            ? (
-              <div>
-                <Link to='/profile'>
-                  <button className={NavStyle.enter}>Profile</button>
+              ? (
+                <div>
+                  <Link to='/profile'>
+                    <button className={NavStyle.enter}>Профиль</button>
+                  </Link>
+                  <button onClick={handleLogout} className={NavStyle.enter}>Выйти</button>
+                </div>
+              ) : (
+                <Link to='/login'>
+                  <button className={NavStyle.enter}>Войти</button>
                 </Link>
-                <button onClick={handleLogout} className={NavStyle.enter}>log out</button>
-              </div>
-            ) : (
-              <Link to='/login'>
-                <button className={NavStyle.enter}>Войти</button>
-              </Link>
-            )
+              )
           }
         </nav>
         <button className={`${NavStyle.burger} ${menuOpen ? NavStyle.active : ''}`} onClick={toggleMenu}>

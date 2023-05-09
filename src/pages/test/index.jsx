@@ -131,8 +131,6 @@ export const TestPage = () => {
             )
           })
           }
-          <div className={NavStyle.btnContainer}>
-          </div>
         </div>
       )}
       {isModalVisible && <ResultsModal onClose={() => setIsModalVisible(false)} />}

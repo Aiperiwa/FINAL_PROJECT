@@ -10,7 +10,7 @@ const Footer = () => {
       <Link to="/">
         <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
       </Link>
-      <p>2023 "Road Rules". Все права защищены.</p>
+      <p className={NavStyle.text}>2023 "Road Rules". Все права защищены.</p>
     </div>
   )
 }

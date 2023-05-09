@@ -29,56 +29,59 @@ export const RegistrationPage = () => {
   };
 
  
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  let nameIsValid = true;
-  let passwordIsValid = true;
-
-  if (username.length < 3) {
-    setNameError('Имя пользователя должно содержать не менее 3 символов');
-    nameIsValid = false;
-  } else {
-    setNameError('');
-  }
-
-  if (password.length < 5) {
-    setPasswordError('Пароль должен содержать не менее 5 символов');
-    passwordIsValid = false;
-  } else {
-    setPasswordError('');
-  }
-
-  if (nameIsValid && passwordIsValid) {
-    setLoading(true)
-    const response = await fetch('http://13.53.186.70/api/register/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username,
-        password,
-        password2: confirmPassword,
-        email
-      })
-    });
-
-    const data = await response.json()
-    setLoading(false)
-
-    if (response.ok) {
-      // регистрация прошла успешно
-      console.log('Регистрация прошла успешно!');
-      localStorage.setItem('token', data.token)
-      navigate('/')
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    let nameIsValid = true;
+    let passwordIsValid = true;
+  
+    if (username.length < 3) {
+      setNameError('Имя пользователя должно содержать не менее 3 символов');
+      nameIsValid = false;
     } else {
-      // обработка ошибок
-      const errorResponse = await response.json();
-      console.log(`Произошла ошибка при регистрации: ${errorResponse.error}`);
+      setNameError('');
     }
-  }
-};
-
+  
+    if (password.length < 5) {
+      setPasswordError('Пароль должен содержать не менее 5 символов');
+      passwordIsValid = false;
+    } else if (!/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
+      setPasswordError('Пароль должен содержать как минимум одну цифру и одну букву');
+      passwordIsValid = false;
+    } else {
+      setPasswordError('');
+    }
+  
+    if (nameIsValid && passwordIsValid) {
+      setLoading(true)
+      const response = await fetch('http://13.53.186.70/api/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          password2: confirmPassword,
+          email
+        })
+      });
+  
+      const data = await response.json()
+      setLoading(false)
+  
+      if (response.ok) {
+        // регистрация прошла успешно
+        console.log('Регистрация прошла успешно!');
+        localStorage.setItem('token', data.token)
+        navigate('/')
+      } else {
+        // обработка ошибок
+        const errorResponse = await response.json();
+        console.log(`Произошла ошибка при регистрации: ${errorResponse.error}`);
+      }
+    }
+  };
+  
 
   return (
     <form className="container2" onSubmit={handleSubmit}>
