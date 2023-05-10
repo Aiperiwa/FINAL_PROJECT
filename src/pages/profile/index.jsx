@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { mockFetch } from "../../utils/mockFetch"
 import HistoryScore from "../../components/HistoryScore"
-import NavStyle from "./profile.module.css"
+import Style from "./profile.module.css"
 import { useNavigate } from "react-router-dom"
 
 
@@ -32,15 +32,15 @@ export const ProfilePage = () => {
   }, [])
 
   return (
-    <div className={NavStyle.profContainer} >
+    <div className={Style.profContainer} >
       <h1>Личный кабинет</h1>
       {loading && <div>Loading...</div>}
-      <table className={NavStyle.table}>
+      <table className={Style.table}>
       <thead>
         <tr>
-          <th className={NavStyle.tableTh}>Date</th>
-          <th className={NavStyle.tableTh}>Score</th>
-          <th className={NavStyle.tableTh}>Time</th>
+          <th className={Style.tableTh}>Date</th>
+          <th className={Style.tableTh}>Score</th>
+          <th className={Style.tableTh}>Time</th>
         </tr>
       </thead>
       <tbody>

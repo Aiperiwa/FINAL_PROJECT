@@ -1,16 +1,16 @@
 import './footer.module.css'
-import NavStyle from './footer.module.css'
+import Style from './footer.module.css'
 import { Link } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 
 
 const Footer = () => {
   return (
-    <div className={NavStyle.footer}>
+    <div className={Style.footer}>
       <Link to="/">
-        <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
+        <img className={Style.logo} src={LogoSvg} alt="logotype" />
       </Link>
-      <p className={NavStyle.text}>2023 "Road Rules". Все права защищены.</p>
+      <p className={Style.text}>2023 "Road Rules". Все права защищены.</p>
     </div>
   )
 }

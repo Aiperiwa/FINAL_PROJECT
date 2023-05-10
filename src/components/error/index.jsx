@@ -1,5 +1,5 @@
 import ErrorImg from '../../img/error.png'
-// import NavStyle from './home.module.css'
+// import Style from './home.module.css'
 
 export const Error = () => {
   return (

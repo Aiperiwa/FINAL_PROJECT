@@ -5,7 +5,6 @@ import { Error } from "../../components/error"
 import { Loader } from "../../components/loader"
 import { Question } from "../../components/question"
 import { useTestPage } from "./useTestsPage"
-import NavStyle from "./test.module.css"
 import Style from "./test.module.css"
 import data from '../../components/question/index.jsx'
 
@@ -42,10 +41,10 @@ export const TestPage = () => {
 }
 
   return (
-    <div className={NavStyle.content}>
+    <div className={Style.content}>
       {loading ? <Loader /> : null}
       {loading ? null : (
-        <div className={NavStyle.bigContainer}>
+        <div className={Style.bigContainer}>
           <h1>Онлайн-тест ПДД КР 2023</h1>
           <CountDown minutes={5} seconds={0} isOver={false} />
           {error && <Error />}

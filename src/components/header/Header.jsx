@@ -1,4 +1,4 @@
-import NavStyle from './header.module.css'
+import Style from './header.module.css'
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 import { useState, useRef, useEffect } from 'react'
@@ -38,39 +38,39 @@ const Header = () => {
   }
   return (
     <>
-      <div className={NavStyle.header_wrapper}>
+      <div className={Style.header_wrapper}>
         <Link to="/">
-          <img className={NavStyle.logo} src={LogoSvg} alt="logotype" />
+          <img className={Style.logo} src={LogoSvg} alt="logotype" />
         </Link>
-        <nav ref={navRef} className={`${NavStyle.nav} ${menuOpen ? NavStyle.active : ''}`}>
+        <nav ref={navRef} className={`${Style.nav} ${menuOpen ? Style.active : ''}`}>
           {
             links.map((link) => (
-              <NavLink className={NavStyle.link} key={link.id} to={link.route} onClick={toggleMenu}>
+              <NavLink className={Style.link} key={link.id} to={link.route} onClick={toggleMenu}>
                 {link.text}
               </NavLink>
             ))
           }
-          <a className={NavStyle.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
+          <a className={Style.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
           {
             localStorage.getItem('token')
             ? (
-              <div className={NavStyle.enterLogout}>
+              <div className={Style.enterLogout}>
                 <Link to='/profile'>
-                  <button className={NavStyle.enter}>Айпери</button>
+                  <button className={Style.enter}>Айпери</button>
                 </Link>
-                <button onClick={handleLogout} className={NavStyle.enter}>log out</button>
+                <button onClick={handleLogout} className={Style.enter}>Выйти</button>
               </div>
             ) : (
               <Link to='/login'>
-                <button className={NavStyle.enter}>Войти</button>
+                <button className={Style.enter}>Войти</button>
               </Link>
             )
           }
         </nav>
-        <button className={`${NavStyle.burger} ${menuOpen ? NavStyle.active : ''}`} onClick={toggleMenu}>
-          <span className={NavStyle.line}></span>
-          <span className={NavStyle.line}></span>
-          <span className={NavStyle.line}></span>
+        <button className={`${Style.burger} ${menuOpen ? Style.active : ''}`} onClick={toggleMenu}>
+          <span className={Style.line}></span>
+          <span className={Style.line}></span>
+          <span className={Style.line}></span>
         </button>
       </div>
     </>

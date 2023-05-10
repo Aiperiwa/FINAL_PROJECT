@@ -18,7 +18,7 @@ input[type='radio'] {
 }
 .check {
     border-radius: 20px;
-    width: 100px;
+    width: 250px;
     height: 60px;
 
     border: none;
