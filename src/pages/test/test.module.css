@@ -35,11 +35,10 @@ p {
 
 
 
-
 .modal {
     position: fixed;
-    top: 30%;
-    left: 33%;
+    top: 20%;
+    left: 35%;
     width: 30%;
     height: 50%;
     background-color: rgba(214, 204, 204, 0.8);

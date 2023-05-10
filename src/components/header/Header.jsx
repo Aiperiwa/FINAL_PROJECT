@@ -2,6 +2,8 @@ import Style from './header.module.css'
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 import { useState, useRef, useEffect } from 'react'
+// import {AuthorizationPage} from '../../pages/login/index'
+
 const links = [
   {
     id: 1,
@@ -29,9 +31,13 @@ const Header = () => {
       document.removeEventListener('mousedown', handleOutsideClick)
     }
   }, [navRef])
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    // e.preventDefault()
     setMenuOpen(!menuOpen)
   }
+  // console.log('asd', menuOpen)
+
+  
   const handleLogout = () => {
     localStorage.removeItem('token')
     navigate('/')
@@ -56,7 +62,7 @@ const Header = () => {
             ? (
               <div className={Style.enterLogout}>
                 <Link to='/profile'>
-                  <button className={Style.enter}>Айпери</button>
+                  <button className={Style.enter}>Samat</button>
                 </Link>
                 <button onClick={handleLogout} className={Style.enter}>Выйти</button>
               </div>

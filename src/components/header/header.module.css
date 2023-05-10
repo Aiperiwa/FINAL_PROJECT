@@ -7,7 +7,7 @@
   border-radius: 30px 30px 0 0 ;
   padding: 0 50px;
   background-color: #474B4F;
-  font-weight: 500;  
+  font-weight: 500; 
 }
 
 .logo {
@@ -66,6 +66,11 @@
 
 .burger {
   display: none;
+}
+
+.burCont {
+  position: relative;
+  z-index: 100000;
 }
 
 @keyframes spin {
@@ -158,8 +163,6 @@
 }
 
 
-
-
 @media screen and (max-width: 450px) {
   body {
     padding: 10px ;
@@ -190,6 +193,7 @@
     height: 20px;
     top: 15px;
     right: 25px;
+
   }
   
   .nav.active {
@@ -236,7 +240,4 @@
     justify-content: center;
     flex-direction: column;
   }
-
-  
-
 }

@@ -1,6 +1,7 @@
 
 import React from "react";
 import "./timer.css";
+import { Link } from "react-router-dom";
 
 const CountDown = (props) => {
     const {
@@ -8,7 +9,6 @@ const CountDown = (props) => {
         seconds = 0,
         getTimerInfo,
         isOver,
-        resultInfo
     } = props
 
   const [[m, s], setTime] = React.useState([minutes, seconds]);
@@ -38,10 +38,10 @@ const CountDown = (props) => {
 
   React.useEffect(() => {
     if (over) {
-      getTimerInfo({
-        isOver: over,
-        finishTime: getFinishTime()
-      });
+      // getTimerInfo({
+      //   isOver: over,
+      //   finishTime: getFinishTime()
+      // });
       setShowModal(true);
     }
   }, [over]);
@@ -59,7 +59,10 @@ const CountDown = (props) => {
         <div className="modal">
           <div className="modal-content">
             <p>Время вышло!</p>
-            <button onClick={handleModalClose}>OK</button>
+            
+            <button onClick={handleModalClose}> <Link to="/">OK</Link></button>
+            {/* <p className='auth1-p' >Нет аккаунта? <Link className='registr' to="/auth">Зарегистрируйся</Link></p> */}
+
           </div>
         </div>
       )}
