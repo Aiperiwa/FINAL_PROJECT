@@ -237,7 +237,7 @@ export const AuthorizationPage = () => {
       })
       .catch(err => {
         setUsernameError('Такого пользователя не существует')
-        // setPasswordError('Неправильный пароль')
+        setPasswordError('Неправильный пароль')
       })
   }
 
