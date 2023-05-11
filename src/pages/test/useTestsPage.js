@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { mockFetch } from "../../utils/mockFetch"
 import { useNavigate } from "react-router-dom"
 
 export const useTestPage = () => { // then

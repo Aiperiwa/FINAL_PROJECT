@@ -23,7 +23,7 @@
 //     }).catch(err => {
 //       console.log('err', err)
 //     })
-   
+
 //   }   
 //       return (
 //         <form className="container">
@@ -196,7 +196,7 @@ const InputWithError = ({ errorMessage, id, type, placeholder, value, onChange }
         value={value}
         onChange={onChange}
       />
-      {errorMessage && <p style={{color: 'red', marginBottom: 0, fontSize: '14px'}}>{errorMessage}</p>}
+      {errorMessage && <p style={{ color: 'red', marginBottom: 0, fontSize: '14px' }}>{errorMessage}</p>}
     </>
   )
 }
@@ -221,20 +221,25 @@ export const AuthorizationPage = () => {
       return
     }
     axios.post('http://16.16.143.176/api/auth_token/', {
-      username, password 
+      username, password
     })
-    .then((res) => {
-      /*{ token, username .... role } */
-      console.log('aa', res.data)
-      localStorage.setItem('token', res.token)
-      //if (data.is_superuser === true) navigate('/questionList')
-      navigate('/')
-    })
-    .catch(err => {
-      setUsernameError('Такого пользователя не существует')
-      // setPasswordError('Неправильный пароль')
-    })
-  }   
+      .then((res) => {
+        // console.log('aa', res.data)
+        localStorage.setItem('token', res.data.token)
+        localStorage.setItem('name', res.data.username)
+
+        // navigate('/')
+        if (res.data.username === 'admin') {
+          navigate('/admin')
+        }else {
+          navigate('/')
+        }
+      })
+      .catch(err => {
+        setUsernameError('Такого пользователя не существует')
+        // setPasswordError('Неправильный пароль')
+      })
+  }
 
   return (
     <form className="container">

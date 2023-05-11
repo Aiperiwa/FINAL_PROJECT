@@ -1,6 +1,106 @@
 {
   "tests": [
     {
+      "id": "q1",
+      "questionNumber": 1,
+      "text": "По какой траектории Вам разрешено выполнить разворот?",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJ5g0rVbt02jaKOdlyMDG4IEyBZwPHH4_ON3uoPfoDwucmKA4u",
+      "variants": [
+        {
+          "id": "q1-v1",
+          "text": "Только по А."
+        },
+        {
+          "id": "q1-v2",
+          "text": "Только по Б"
+        },
+        {
+          "id": "q1-v3",
+          "text": "По любой из указанных"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "questionNumber": 2,
+      "text": "С какой скоростью Вы можете продолжить движение вне населенного пункта по левой полосе на легковом автомобиле?",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7_eq_SCMCvDNLH4xvfJA1DTz1fJLmjn1hrdVFWMAnrrhBUVzd",
+      "variants": [
+        {
+          "id": "q2-v1",
+          "text": "Не более 50 км/ч"
+        },
+        {
+          "id": "q2-v2",
+          "text": "Не менее 50 км/ч и не более 70 км/ч"
+        },
+        {
+          "id": "q2-v3",
+          "text": "Не менее 50 км/ч и не более 90 км/ч."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "questionNumber": 3,
+      "text": "Можно ли водителю легкового автомобиля выполнить обгон грузовых автомобилей вне населенного пункта по такой траектории?",
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXuFcp3Q-60lHeYZWIRH1tU0pT7jCuJDeRO4eXssKkQUdn50cs",
+      "variants": [
+        {
+          "id": "q3-v1",
+          "text": "Можно. "
+        },
+        {
+          "id": "q3-v2",
+          "text": "Можно, если скорость грузовых автомобилей менее 30 км/ч"
+        },
+        {
+          "id": "q3-v3",
+          "text": "Нельзя"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "questionNumber": 4,
+      "text": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
+      "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSOzlpBwpS8Jp2qjauRYAO2Lkq8Xz8teu9NBC4rar5m72nJilfl",
+      "variants": [
+        {
+          "id": "q4-v1",
+          "text": "Только если расстояние до сплошной линии разметки не менее 3 м"
+        },
+        {
+          "id": "q4-v2",
+          "text": "Только если расстояние до края пересекаемой проезжей части не менее 5 м"
+        },
+        {
+          "id": "q4-v3",
+          "text": "При соблюдении обоих перечисленных условий. "
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "questionNumber": 5,
+      "text": "Двигаясь по левой полосе, водитель намерен перестроиться на правую. На каком из рисунков показана ситуация, в которой он обязан уступить дорогу?",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3YSnTvOy9VtpJcSRfBT-CEDgZ4KALTEn9ZWRWMV9de6gVGJ-t",
+      "variants": [
+        {
+          "id": "q5-v1",
+          "text": "На левом"
+        },
+        {
+          "id": "q5-v2",
+          "text": "На правом"
+        },
+        {
+          "id": "q5-v3",
+          "text": "На обоих."
+        }
+      ]
+    },
+    {
       "id": "q6",
       "questionNumber": 6,
       "text": "Кому Вы обязаны уступить дорогу при повороте налево?",

@@ -31,12 +31,14 @@
 //   function handleChangeId() {
 //     setQuestionNumber(prev => prev + 1)
 //     // написать код который сохраняет все ваши ответы на вопросы
-//     setIsModalVisible(true);
 //   }
 
 //   const endTest = () => { 
+//     if (questionNumber === lastQuestion) {
+//             setIsModalVisible(true);
+//           }
 //     // написать код который отправляет все ваши ответы на 20 вопросов в бэк и переводит на страницу результата 
-//     setIsModalVisible(true);
+//     // setIsModalVisible(true);
 
 // }
 
@@ -46,7 +48,7 @@
 //       {loading ? null : (
 //         <div className={Style.bigContainer}>
 //           <h1>Онлайн-тест ПДД КР 2023</h1>
-//           <CountDown minutes={5} seconds={0} isOver={false} />
+//           <CountDown minutes={5} seconds={51} isOver={false} />
 //           {error && <Error />}
 //           {tests.map((e, idx) => {
 //             if (questionNumber !== e.questionNumber) {
@@ -79,7 +81,7 @@ import { Loader } from "../../components/loader"
 import { Question } from "../../components/question"
 import { useTestPage } from "./useTestsPage"
 import Style from "./test.module.css"
-
+import { Link } from "react-router-dom";
 
 const ResultsModal = ({ onClose, correctAnswers }) => {
   // logic to display the results
@@ -87,7 +89,7 @@ const ResultsModal = ({ onClose, correctAnswers }) => {
     <div className={Style.modal}>
       <h2>Результаты теста:</h2>
       <p>Вы ответили правильно на {correctAnswers} из 20 вопросов.</p>
-      <button className={Style.btnClose} onClick={onClose}>Закрыть</button>
+      <button className={Style.btnClose} onClick={onClose}><Link to="/">ОК</Link></button>
     </div>
   );
 };
@@ -96,7 +98,7 @@ export const TestPage = () => {
   
   const { loading, tests, error } = useTestPage()
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [questionNumber, setQuestionNumber] = useState(19);
+  const [questionNumber, setQuestionNumber] = useState(18);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const lastQuestion = tests.length
 
@@ -127,7 +129,7 @@ export const TestPage = () => {
       {loading ? null : (
         <div className={Style.bigContainer}>
           <h1>Онлайн-тест ПДД КР 2023</h1>
-          <CountDown minutes={0} seconds={5} isOver={false} />
+          <CountDown minutes={0} seconds={60} isOver={false} />
           {error && <Error />}
           {tests.map((e, idx) => {
             if (questionNumber !== e.questionNumber) {

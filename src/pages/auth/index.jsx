@@ -60,6 +60,8 @@ const handleSubmit = async (event) => {
       // регистрация прошла успешно
       console.log('Регистрация прошла успешно!');
       localStorage.setItem('token', data.token)
+      localStorage.setItem('name', data.username)
+
       navigate('/')
     } else {
       // обработка ошибок

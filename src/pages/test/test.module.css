@@ -22,6 +22,7 @@ h1 {
     margin-bottom: 30px;
 }
 
+
 p {
     text-align: center;
     font-size: 22px;
@@ -32,7 +33,6 @@ p {
     display: flex;
     justify-content: center;
 }
-
 
 
 .modal {
@@ -52,15 +52,15 @@ p {
 
 .btnClose {
     background-color: #86C232;
-    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
 }
 
-.modal-footer button:hover {
-    background-color: #0062cc;
+.btnClose a {
+    text-decoration: none;
+    color: #fff;
 }
 
 

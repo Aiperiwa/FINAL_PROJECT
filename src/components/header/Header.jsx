@@ -2,7 +2,6 @@ import Style from './header.module.css'
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LogoSvg from '../../img/logo.png'
 import { useState, useRef, useEffect } from 'react'
-// import {AuthorizationPage} from '../../pages/login/index'
 
 const links = [
   {
@@ -18,6 +17,8 @@ const links = [
 ]
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const name = localStorage.getItem('name')
+  console.log(name);
   const navRef = useRef(null)
   const navigate = useNavigate()
   useEffect(() => {
@@ -62,13 +63,13 @@ const Header = () => {
             ? (
               <div className={Style.enterLogout}>
                 <Link to='/profile'>
-                  <button className={Style.enter}>Samat</button>
+                  <button className={Style.enter}>{name}</button>
                 </Link>
                 <button onClick={handleLogout} className={Style.enter}>Выйти</button>
               </div>
             ) : (
               <Link to='/login'>
-                <button className={Style.enter}>Войти</button>
+                <button className={Style.enter1}>Войти</button>
               </Link>
             )
           }
