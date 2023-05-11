@@ -31,7 +31,7 @@
 
 .enter1 {
   width: 100px;
-  height: 50px;
+  height: 40px;
   border: none;
   border-radius: 30px;
   background: #61892F ;
@@ -41,14 +41,25 @@
 
 .enter {
   width: 100px;
-  height: 50px;
+  height: 40px;
   border: none;
   border-radius: 30px;
   background: #61892F ;
   color: #fff;
   margin-left: 100px;
+  margin-top: 10px;
 }
 
+.enter:hover {
+  background-color: #86C232;
+  font-weight: 500;
+}
+
+.enter:active {
+  transform: scale(0.9);
+  }
+
+  
 .enter1:hover {
   background-color: #86C232;
   font-weight: 500;

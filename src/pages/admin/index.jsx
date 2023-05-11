@@ -37,7 +37,7 @@ export const QuestionListPage = () => {
       <div className={Style.testsContainer}>
         {tests.length === 0 && <p>Нет тестов</p>}
         {tests.map((t) => (
-          <div className="item-container" key={t.id}>
+          <div className={Style.itemContainer} key={t.id}>
             <div className={Style.cart}>
               <div>
                 <h5>
@@ -48,9 +48,7 @@ export const QuestionListPage = () => {
               <img src={t.image} alt="" />
               {t.variants.map((v) => (
                 <div key={v.id} className={Style.variant}>
-                  <ul>
                     <li>{v.text}</li>
-                  </ul>
                 </div>
               ))}
               <div className={Style.updateBtn}>
