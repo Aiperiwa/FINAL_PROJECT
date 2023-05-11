@@ -58,6 +58,12 @@
   .modal-content button:hover {
     background-color: #61892F ;
   }
+
+  .modal-content a {
+    text-decoration: none;
+    color: black;
+    
+  }
   
 
 

@@ -61,7 +61,6 @@ const CountDown = (props) => {
             <p>Время вышло!</p>
             
             <button onClick={handleModalClose}> <Link to="/">OK</Link></button>
-            {/* <p className='auth1-p' >Нет аккаунта? <Link className='registr' to="/auth">Зарегистрируйся</Link></p> */}
 
           </div>
         </div>
