@@ -1,6 +1,6 @@
 import HomeImage from '../../img/doroga-zvezdy-gory-noch-nochnaia-doroga-long-exposure-dlinna.jpg'
-import HomeImage2 from '../../img/Без названия.jpg'
-import HomeImage3 from '../../img/main.jpg'
+import HomeImage2 from '../../img/yeshi-kangrang-14RqNPmDOno-unsplash.jpg'
+import HomeImage3 from '../../img/sky.jpeg'
 
 
 import Style from './home.module.css'
