@@ -9,17 +9,14 @@ export const Question = (props) => {
     handleChangeId,
     lastQuestion,
     questionNumber,
-    endTest
+    endTest,
   } = props
 
   const [disabled, setDisabled] = useState(true)
-
+  
   const test = () => {
     setDisabled(false)
   }
-
-  console.log(disabled)
-
   return (
 
     <div className="q-item">

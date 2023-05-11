@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { mockFetch } from "../../utils/mockFetch"
 import { useNavigate } from "react-router-dom"
 
-export const useTestPage = () => { // then
+export const useTestPage = () => {
   const [tests, setTests] = useState([])
+  const [answers, setAnswers] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const navigate = useNavigate()
@@ -11,10 +11,13 @@ export const useTestPage = () => { // then
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setLoading(true)
-      fetch('http://localhost:3000/tests')
-      .then(res => res.json())
-      .then(data => {
-        setTests(data)
+      Promise.all([
+        fetch('http://localhost:3000/tests').then(res => res.json()),
+        fetch('http://localhost:3000/answers').then(res => res.json())
+      ])
+      .then(([testsData, answersData]) => {
+        setTests(testsData)
+        setAnswers(answersData)
       })
       .catch((err) => {
         setError(true)
@@ -27,37 +30,9 @@ export const useTestPage = () => { // then
     }
     
   }, [])
+  console.log(answers);
 
   return {
-    tests, loading, error
+    tests, answers, loading, error
   }
-  
 }
-
-// export const useEventPage = () => {              //async await
-//   const [events, setEvents] = useState([])
-//   const [loading, setLoading] = useState(false)
-//   const [error, setError] = useState('')
-
-//   useEffect(() => {
-//     async function fetchEvents() {
-//       try {
-//         setLoading(true)
-//         const response = await mockFetch('/events.json')
-//         const data = await response.json()
-//         setEvents(data)
-//       } 
-//       catch {
-//         setError('ошибка')
-//       } 
-//       finally {
-//         setLoading(false)
-//       }
-//     }
-//     fetchEvents()
-//   }, [])
-
-//   return {
-//     events, loading, error
-//   }
-// }
