@@ -11,7 +11,7 @@ export const useTestPage = () => { // then
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setLoading(true)
-      mockFetch('/tests.json')
+      fetch('http://localhost:3000/tests')
       .then(res => res.json())
       .then(data => {
         setTests(data)
