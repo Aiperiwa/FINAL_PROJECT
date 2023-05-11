@@ -49,12 +49,12 @@
   margin-left: 100px;
 }
 
-.enter:hover {
+.enter1:hover {
   background-color: #86C232;
   font-weight: 500;
 }
 
-.enter:active {
+.enter1:active {
   transform: scale(0.9);
   }
 
