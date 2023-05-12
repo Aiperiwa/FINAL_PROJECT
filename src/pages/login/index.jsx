@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import './auth.css';
 import { Link, useNavigate } from 'react-router-dom'
@@ -46,11 +44,9 @@ export const AuthorizationPage = () => {
       username, password
     })
       .then((res) => {
-        // console.log('aa', res.data)
         localStorage.setItem('token', res.data.token)
         localStorage.setItem('name', res.data.username)
 
-        // navigate('/')
         if (res.data.username === 'admin') {
           navigate('/admin')
         }else {

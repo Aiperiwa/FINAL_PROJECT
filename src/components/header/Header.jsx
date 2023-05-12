@@ -33,12 +33,10 @@ const Header = () => {
     }
   }, [navRef])
   const toggleMenu = (e) => {
-    // e.preventDefault()
     setMenuOpen(!menuOpen)
   }
-  // console.log('asd', menuOpen)
 
-  
+
   const handleLogout = () => {
     localStorage.removeItem('token')
     navigate('/')
@@ -49,6 +47,8 @@ const Header = () => {
         <Link to="/">
           <img className={Style.logo} src={LogoSvg} alt="logotype" />
         </Link>
+
+
         <nav ref={navRef} className={`${Style.nav} ${menuOpen ? Style.active : ''}`}>
           {
             links.map((link) => (
@@ -57,21 +57,21 @@ const Header = () => {
               </NavLink>
             ))
           }
-          <a className={Style.pdd} href="/PDD_KR2021.pdf">ПДД КР 2023</a>
+          <a className={Style.pdd} href="/PDD_KR2021.pdf">ПДД КР </a>
           {
             localStorage.getItem('token')
-            ? (
-              <div className={Style.enterLogout}>
-                <Link to='/profile'>
-                  <button className={Style.enter}>{name}</button>
+              ? (
+                <div className={Style.enterLogout}>
+                  <Link to='/profile'>
+                    <button className={Style.enter}>{name}</button>
+                  </Link>
+                  <button onClick={handleLogout} className={Style.enter}>Выйти</button>
+                </div>
+              ) : (
+                <Link to='/login'>
+                  <button className={Style.enter1}>Войти</button>
                 </Link>
-                <button onClick={handleLogout} className={Style.enter}>Выйти</button>
-              </div>
-            ) : (
-              <Link to='/login'>
-                <button className={Style.enter1}>Войти</button>
-              </Link>
-            )
+              )
           }
         </nav>
         <button className={`${Style.burger} ${menuOpen ? Style.active : ''}`} onClick={toggleMenu}>

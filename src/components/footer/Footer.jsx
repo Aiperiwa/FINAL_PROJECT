@@ -10,7 +10,7 @@ const Footer = () => {
       <Link to="/">
         <img className={Style.logo} src={LogoSvg} alt="logotype" />
       </Link>
-      <p className={Style.text}>2023 "Road Rules". Все права защищены.</p>
+      <p className={Style.text}>2023 "Road Room". Все права защищены.</p>
     </div>
   )
 }

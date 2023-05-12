@@ -217,7 +217,7 @@ export const TestPage = () => {
       {loading ? null : (
         <div className={Style.bigContainer}>
           <h1>Онлайн-тест ПДД КР 2023</h1>
-          <CountDown minutes={5} seconds={0} isOver={false} />
+          <CountDown minutes={20} seconds={0} isOver={false} />
           {error && <Error />}
           {tests.map((e, idx) => {
             if (questionNumber !== e.questionNumber) {
